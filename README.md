@@ -1,5 +1,7 @@
 doodle.io
 =========
+Hello y'all
+I am satwika and this is doodle. io
 
 Doodle with strangers on InterWeb!
 
@@ -14,9 +16,4 @@ This little toy app also supports multiple inputs methods by using `mouse`, `tou
 
 If nobody else is present, try launching the URL on multiple tabs/browsers/devices and try doodling on all browser windows.
  
-![Screencast](http://girliemac.github.io/assets/images/articles/2014/09/doodle.gif "CoDoodler Screencast")
-
-### With PubNub History API
-
-Also, there is another demo with the `history()` API, which preloads the past 50 drowing strokes, while the first demo starts with a fresh canvas.
 
