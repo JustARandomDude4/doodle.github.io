@@ -1,15 +1,17 @@
 (function() {
 	/* Canvas */
-
-	var canvas = document.getElementById('drawCanvas');
-	var ctx = canvas.getContext('2d');
+/*The UI is intentionally simple to reduce the amount of code necessary to bind the message updates to the UI components.
+T*/
+occupancy
+	var canvas = document.getElementById('drawCanvas');  
+	var ctx = canvas.getContext('2d');           //cuz i wanna draw in 2d
 	var color = document.querySelector(':checked').getAttribute('data-color');
 
 	canvas.width = Math.min(document.documentElement.clientWidth, window.innerWidth || 300);
 	canvas.height = Math.min(document.documentElement.clientHeight, window.innerHeight || 300);
 	 
-	ctx.strokeStyle = color;
-	ctx.lineWidth = '3';
+	ctx.strokeStyle = color;      /* color of pen set to the selected pen color */
+	ctx.lineWidth = '3';        /*pen width */
 	ctx.lineCap = ctx.lineJoin = 'round';
 
 	/* Mouse and touch events */
@@ -30,13 +32,17 @@
 	canvas.addEventListener(moveEvent, draw, false);
 	canvas.addEventListener(upEvent, endDraw, false);
 
+	canvas.addEventListener('click',e=> {if (e.target.id=='clear'){ctx.clearReact(0,0,canvas.width,canvas.height);}})
+
 	/* PubNub */
+/*Initialize the PubNub Object
+The PubNub object allows you to make PubNub API calls, like publish, subscribe and more. There are more configuration properties than what you see here, but this is all you need for this Quickstart. Of course, you would use your own publish/subscribe keys below.*/
 
 	var channel = 'draw';
 
 	var pubnub = PUBNUB.init({
-		publish_key     : 'pub-c-156a6d5f-22bd-4a13-848d-b5b4d4b36695',
-		subscribe_key   : 'sub-c-f762fb78-2724-11e4-a4df-02ee2ddab7fe',
+		publish_key     : 'pub-c-38000c28-4066-491f-bfa3-2e0ea6f5047a',
+		subscribe_key   : 'sub-c-0dd31fba-7e5b-11ec-8e41-c2c95df3c49a',
 		leave_on_unload : true,
 		ssl		: document.location.protocol === "https:"
 	});
@@ -45,7 +51,7 @@
 		channel: channel,
 		callback: drawFromStream,
 		presence: function(m){
-			if(m.occupancy > 1){
+			if(m.occupancy >= 1){
 				document.getElementById('unit').textContent = 'doodlers';
 			}
    			document.getElementById('occupancy').textContent = m.occupancy;
@@ -80,7 +86,7 @@
 		drawOnCanvas(message.color, message.plots);
     }
     
-    // Get Older and Past Drawings!
+    // Get Older and Past Drawings
     if(drawHistory) {
 	    pubnub.history({
 	    	channel  : channel,

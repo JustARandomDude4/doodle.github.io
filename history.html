@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Doodle</title>
+	<meta name="description" content="Draw">
+	<meta name="author" content="Satwika Katragadda">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" >
+</head>
+
+<body class="alt">
+	<header>
+		<div>
+			<h1>DOODLE</h1>
+			<h2>Doodle with strangers on InterWeb!</h2>
+		</div>
+		<div class="bubble">
+			<span id="occupancy">0</span>
+			<span id="unit">doodler</span>
+		</div>
+	</header>
+
+	<section id="main">
+		<canvas id="drawCanvas" width="300" height="300">Canvas is not supported on this browser!</canvas>
+
+		<section id="colorSwatch">
+			<input type="radio" name="color" id="color01" data-color="gold" checked><label for="color01" title="hi" aria-placeholder="absolute1"></label> 
+			<input type="radio" name="color" id="color03" data-color="navy">		<label for="color03" title="hi" aria-placeholder="absolute"></label>  
+			<input type="radio" name="color" id="color04" data-color="yellowgreen">	<label for="color04" title="hi" aria-placeholder="absolute"></label>  
+			<input type="radio" name="color" id="color05" data-color="firebrick">	<label for="color05" title="hi" aria-placeholder="absolute"></label>  
+			<input type="radio" name="color" id="color06" data-color="powderblue">	<label for="color06" title="hi" aria-placeholder="absolute"></label> 
+			<input type="radio" name="color" id="color07" data-color="black" checked><label for="color07" title="hi" aria-placeholder="absolute"></label>
+			<input type="radio" name="color" id="color08" data-color="pink" checked><label for="color08" title="hi" aria-placeholder="absolute"></label>
+			<input type="radio" name="color" id="color09" data-color="white" checked><label for="color09" title="hi" aria-placeholder="absolute"></label>
+			<input type="radio" name="color" id="color10" data-color="green" checked><label for="color10" title="hi" aria-placeholder="absolute"></label> 
+		    <button type="button" id="undo" class="button">Undo</button><label for="undo" title="hi" aria-placeholder="absolute"></label> 
+		</section>
+	</section>
+	
+	<script>
+		var drawHistory = true;
+	</script>
+
+	<script src="//cdn.pubnub.com/pubnub-3.14.1.min.js"></script>
+	<script src="js/app.min.js"></script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PZWSZ2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PZWSZ2');</script>
+<!-- End Google Tag Manager -->	
+</body>
+</html>

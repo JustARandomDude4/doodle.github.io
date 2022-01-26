@@ -3,20 +3,22 @@ html {
 	height: 100%;
 }
 body {
-    font-family: "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: 'Happy Monkey', cursive;
+	
     font-size: 1.2rem;
+	font-weight:bolder;
     margin: 1em;
-    color: #fff;
+    color: rgb(3, 3, 3);
     background: url(../images/grid-pattern.png) left top repeat, 
-    			-webkit-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    			-webkit-radial-gradient(50% 15%, #750bbb, #3f0263) no-repeat;
     background: url(../images/grid-pattern.png) left top repeat, 
-    			-moz-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    			-moz-radial-gradient(50% 15%,  #750bbb,#3f0263) no-repeat;
     background: url(../images/grid-pattern.png) left top repeat, 
-    			-ms-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    			-ms-radial-gradient(50% 15%,  #750bbb,#3f0263) no-repeat;
     background: url(../images/grid-pattern.png) left top repeat, 
-    			-o-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    			-o-radial-gradient(50% 15%,  #750bbb,#3f0263) no-repeat;
     background: url(../images/grid-pattern.png) left top repeat, 
-    			radial-gradient(circle farthest-side at 50% 15%, #2c98dd, #1a5f96) no-repeat;
+    			radial-gradient(circle farthest-side at 50% 15%,#7921b4 ,#2d0444) no-repeat;
     background-color: #1a5f96;
 }
 body.alt {
@@ -32,36 +34,24 @@ body.alt {
     			radial-gradient(circle farthest-side at 50% 15%, #1c802e, #012e13) no-repeat;
     background-color: #012e13;
 }
-body.alt2 {
-	background: url(../images/grid-pattern.png) left top repeat, 
-    			-webkit-radial-gradient(50% 15%, #ababab, #505050) no-repeat;
-    background: url(../images/grid-pattern.png) left top repeat, 
-    			-moz-radial-gradient(50% 15%, #ababab, #505050) no-repeat;
-    background: url(../images/grid-pattern.png) left top repeat, 
-    			-ms-radial-gradient(50% 15%, #ababab, #505050) no-repeat;
-    background: url(../images/grid-pattern.png) left top repeat, 
-    			-o-radial-gradient(50% 15%, #ababab, #505050) no-repeat;
-    background: url(../images/grid-pattern.png) left top repeat, 
-    			radial-gradient(circle farthest-side at 50% 15%, #ababab, #505050) no-repeat;
-    background-color: #505050;
-}
 header {
 	margin-bottom: 1em;
 }
 h1, h2, h3 {
 	margin: 0;
-	font-weight: normal;
+	font-weight:bolder;
 }
 h1 {
 	font-size: 3.375rem;
-	text-transform: lowercase;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+	text-transform: uppercase;
+	text-shadow: 1px 1px 3px rgba(245, 242, 244, 0.8);
+
 }
 h2 {
 	font-size: 1rem;
 	text-transform: uppercase;
 	line-height: 1.6rem;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+	text-shadow: 1px 1px 2px rgba(248, 240, 246, 0.8);
 }
 a {
 	color: #fff;
@@ -75,7 +65,7 @@ footer {
 	right: 1em;
 }
 #drawCanvas {
-  	-ms-touch-action: none;
+  	touch-action: none;
   	position: absolute;
 	top: 0;
 	left: 0;
@@ -86,7 +76,7 @@ footer {
 }
 #colorSwatch {
 	position: absolute;
-	bottom: 20px;
+	bottom: 10px;
 	right: 20px;
 }
 
@@ -102,23 +92,43 @@ input[type=radio]:checked + label::after {
 	left: 8px;
 }
 
+button
+{
+
+	border: 2px solid white;
+	cursor: pointer;
+	color: white;
+	background:black ;
+	font-weight: bold;
+	display: inline-block;
+		width: 50px;
+		height: 50px;
+		right: 20px;
+	caret-color: #560286;
+	border-radius: 100%;
+	right: 200px;
+}
 label {
 	display: inline-block; 
 	width: 48px; height: 48px; 
 	position: relative;
 	padding-right: 5px;
 	border-radius: 50%;
+	border-color: #000;
+	border-width: 2px;
 	text-shadow: 1px 1px 2px #000;
 	color: #fff;
 	font-size: 32px;
 	line-height: 46px;
 }
-label[for=color01] {background: gold;}
-label[for=color02] {background: darkorange;}
-label[for=color03] {background: navy;}
-label[for=color04] {background: yellowgreen;}
-label[for=color05] {background: firebrick;}
-label[for=color06] {background: powderblue;}
+label[for=color01] {background: gold;border: 2px solid rgb(255, 255, 255);}
+label[for=color03] {background: navy;border: 2px solid rgb(255, 250, 250);}
+label[for=color04] {background: rgb(8, 214, 43);border: 2px solid rgb(255, 255, 255);}
+label[for=color05] {background: rgb(201, 10, 10);border: 2px solid rgb(250, 245, 245);}
+label[for=color06] {background: rgb(26, 188, 209);border: 2px solid rgb(252, 252, 252);}
+label[for=color07] {background: black;border: 2px solid rgb(255, 252, 252);}
+label[for=color08] {background: rgb(248, 7, 139);border: 2px solid rgb(248, 243, 243);}
+label[for=color09] {background: rgb(255, 255, 255);border: 2px solid rgb(0, 0, 0);}*/
 
 footer {
 	margin-top: 1.5em;
@@ -148,7 +158,7 @@ header div {
   	line-height: .9em;
   	color: #fff;
   	text-align: center;
-  	background: #0142a3;
+  	background: #000000;
 }
 .bubble span {
   	display: block;
@@ -170,7 +180,7 @@ header div {
 	#colorSwatch {
 		display: inline-block;
 		width: 50px;
-		top: 120px;
+		top: 20px;
 		right: 20px;
 	}
 	.alt2 #colorSwatch {
@@ -188,7 +198,7 @@ header div {
 	  	line-height: 1.05em;
 	  	color: #fff;
 	  	text-align: center;
-	  	background: #0142a3;
+	  	background: #000000;
 	}
 	.bubble:after {
 	  	content: "";
@@ -199,7 +209,7 @@ header div {
 	  	border-left-width: 20px;
 	  	border-bottom-width: 15px;
 	  	border-style: solid;
-	  	border-color: transparent #0142a3;
+	  	border-color: transparent #000000;
 	  	display: block;
 	  	width: 0;
 	}
