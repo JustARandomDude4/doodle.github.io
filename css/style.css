@@ -49,7 +49,6 @@ h1 {
 }
 h2 {
 	font-size: 1rem;
-	text-transform: uppercase;
 	line-height: 1.6rem;
 	text-shadow: 1px 1px 2px rgba(248, 240, 246, 0.8);
 }
@@ -122,13 +121,12 @@ label {
 	line-height: 46px;
 }
 label[for=color01] {background: gold;border: 2px solid rgb(255, 255, 255);}
-label[for=color03] {background: navy;border: 2px solid rgb(255, 250, 250);}
+label[for=color02] {background: rgb(255, 255, 255);border: 2px solid rgb(0, 0, 0);}
 label[for=color04] {background: rgb(8, 214, 43);border: 2px solid rgb(255, 255, 255);}
 label[for=color05] {background: rgb(201, 10, 10);border: 2px solid rgb(250, 245, 245);}
-label[for=color06] {background: rgb(26, 188, 209);border: 2px solid rgb(252, 252, 252);}
+label[for=color06] {background: rgb(3, 118, 196);border: 2px solid rgb(252, 252, 252);}
 label[for=color07] {background: black;border: 2px solid rgb(255, 252, 252);}
-label[for=color08] {background: rgb(248, 7, 139);border: 2px solid rgb(248, 243, 243);}
-label[for=color09] {background: rgb(255, 255, 255);border: 2px solid rgb(0, 0, 0);}*/
+
 
 footer {
 	margin-top: 1.5em;

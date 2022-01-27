@@ -127,4 +127,16 @@ The PubNub object allows you to make PubNub API calls, like publish, subscribe a
 
 	  	plots = [];
 	}
+
+	function undoLastPoint() {
+
+		// remove the last drawn point from the drawing array
+		var lastPoint=points.pop();
+	
+		// add the "undone" point to a separate redo array
+		redoStack.unshift(lastPoint);
+	
+		// redraw all the remaining points
+		redrawAll();
+	}
 })();
