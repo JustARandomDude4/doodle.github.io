@@ -41,8 +41,8 @@ The PubNub object allows you to make PubNub API calls, like publish, subscribe a
 	var channel = 'draw';
 
 	var pubnub = PUBNUB.init({
-		publish_key     : 'pub-c-38000c28-4066-491f-bfa3-2e0ea6f5047a',
-		subscribe_key   : 'sub-c-0dd31fba-7e5b-11ec-8e41-c2c95df3c49a',
+		publish_key     : 'pub-c-2ee25e24-a0aa-401d-b6e3-ad2a0b184c39',
+		subscribe_key   : 'sub-c-4546fca7-a28a-4285-8602-dee027880648',
 		leave_on_unload : true,
 		ssl		: document.location.protocol === "https:"
 	});
